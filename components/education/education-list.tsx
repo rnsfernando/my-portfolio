@@ -8,11 +8,11 @@ export function EducationList() {
 
     return (
         <div className="flex flex-col gap-12">
-            <div className="flex flex-col space-y-1 text-center mb-1">
-                <h2 className="font-heading text-base md:text-lg">
+            <div className="flex flex-col space-y-4 text-center mb-4">
+                <h2 className="font-heading text-xl md:text-2xl">
                     Education
                 </h2>
-                <p className="text-muted-foreground text-[10px] max-w-[85%] mx-auto leading-tight">
+                <p className="text-muted-foreground text-lg sm:text-xl max-w-[85%] mx-auto leading-normal sm:leading-7">
                     Academic journey and qualifications
                 </p>
             </div>
@@ -22,53 +22,53 @@ export function EducationList() {
                 if (items.length === 0) return null;
 
                 return (
-                    <div key={category} className="flex flex-col gap-2">
-                        <h3 className="font-heading text-xs md:text-sm text-primary font-semibold border-b pb-0.5 mb-0.5">
+                    <div key={category} className="flex flex-col gap-6">
+                        <h3 className="font-heading text-lg md:text-xl text-primary font-semibold border-b pb-1 mb-2">
                             {category}
                         </h3>
                         <div className="flex flex-col gap-8">
                             {items.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="rounded-lg border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
+                                    className="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
                                 >
-                                    <div className="flex flex-col md:flex-row gap-2 p-2">
+                                    <div className="flex flex-col md:flex-row gap-4 p-4">
                                         <div className="flex-shrink-0">
-                                            <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center overflow-hidden p-1 border border-muted shadow-sm">
+                                            <div className="h-24 w-24 rounded-full bg-white flex items-center justify-center overflow-hidden p-1 border border-muted shadow-sm">
                                                 {item.logo ? (
                                                     <Image src={item.logo} alt={item.institution} className="h-full w-full object-contain" />
                                                 ) : (
-                                                    <item.icon className="h-6 w-6 text-primary" />
+                                                    <item.icon className="h-10 w-10 text-primary" />
                                                 )}
                                             </div>
                                         </div>
-                                        <div className="flex-grow space-y-1.5">
+                                        <div className="flex-grow space-y-4">
                                             <div>
-                                                <h3 className="text-base font-bold leading-tight tracking-tight">{item.institution}</h3>
-                                                <p className="text-xs font-semibold text-primary/90">{item.degree}</p>
-                                                <p className="text-[10px] text-muted-foreground uppercase tracking-tight">{item.field}</p>
+                                                <h3 className="text-4xl font-semibold leading-none tracking-tight mb-2">{item.institution}</h3>
+                                                <p className="text-2xl font-medium text-primary">{item.degree}</p>
+                                                <p className="text-xl text-muted-foreground">{item.field}</p>
                                             </div>
 
-                                            <div className="flex flex-col gap-0.5 text-[10px] text-muted-foreground">
-                                                <div className="flex items-center gap-1.5">
-                                                    <Icons.mapPin className="h-3 w-3" />
+                                            <div className="flex flex-col gap-2 text-lg text-muted-foreground">
+                                                <div className="flex items-center gap-2">
+                                                    <Icons.mapPin className="h-5 w-5" />
                                                     {item.location}
                                                 </div>
-                                                <div className="flex items-center gap-1.5">
-                                                    <Icons.calendar className="h-3 w-3" />
+                                                <div className="flex items-center gap-2">
+                                                    <Icons.calendar className="h-5 w-5" />
                                                     {item.year}
                                                 </div>
                                             </div>
 
-                                            <div className="pt-0.5 flex flex-wrap items-center gap-1">
+                                            <div className="pt-1 flex flex-wrap items-center gap-2">
                                                 {item.score && (
-                                                    <div className="inline-flex items-center rounded-sm border border-transparent bg-secondary/50 px-1 py-0 text-[8px] font-bold text-secondary-foreground shadow-sm">
+                                                    <div className="inline-flex items-center rounded-lg border border-transparent bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground shadow-sm">
                                                         {item.score}
                                                     </div>
                                                 )}
                                                 {item.awards && (
-                                                    <div className="flex items-center gap-0.5 text-[8px] text-muted-foreground font-medium px-0.5">
-                                                        <Icons.star className="h-2 w-2 text-yellow-500" />
+                                                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium px-1">
+                                                        <Icons.star className="h-3.5 w-3.5 text-yellow-500" />
                                                         {item.awards}
                                                     </div>
                                                 )}
@@ -77,11 +77,11 @@ export function EducationList() {
                                     </div>
 
                                     {item.courses && item.courses.length > 0 && (
-                                        <div className="px-3 pb-3">
-                                            <p className="text-xs font-bold mb-0.5 flex items-center gap-1.5 text-foreground/90">
-                                                <Icons.bookOpen className="h-3 w-3" /> Key Courses:
+                                        <div className="p-8 pt-0">
+                                            <p className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                                                <Icons.bookOpen className="h-6 w-6" /> Key Courses:
                                             </p>
-                                            <p className="text-[10px] text-muted-foreground leading-snug">
+                                            <p className="text-xl text-muted-foreground leading-relaxed">
                                                 {item.courses.join(", ")}
                                             </p>
                                         </div>

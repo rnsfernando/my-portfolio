@@ -101,7 +101,7 @@ export default function IndexPage() {
         <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center lg:justify-center order-1 lg:order-1">
-            <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px]">
+            <div className="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] lg:w-[280px] lg:h-[280px]">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-blue-600 rounded-full blur-2xl opacity-40 animate-pulse" />
               <div className="absolute -inset-1 bg-gradient-to-br from-primary to-purple-600 rounded-full opacity-60" />
               <Image

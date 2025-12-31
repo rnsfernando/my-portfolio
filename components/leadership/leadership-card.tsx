@@ -13,39 +13,39 @@ export default function LeadershipCard({ leadership }: LeadershipCardProps) {
     };
 
     return (
-        <div className="rounded-md border border-border bg-card p-1.5 shadow-sm transition-all hover:shadow-md">
-            <div className="flex flex-col md:flex-row gap-2 md:items-start">
+        <div className="rounded-lg border border-border bg-card p-4 shadow-sm transition-all hover:shadow-md">
+            <div className="flex flex-col md:flex-row gap-6 md:items-start">
                 {/* Logo Section */}
                 <div className="flex-shrink-0 mx-auto md:mx-0">
                     <div className="relative">
                         <Image
                             src={leadership.logo}
                             alt={leadership.organization}
-                            width={32}
-                            height={32}
-                            className="object-contain w-auto h-auto max-w-[32px] max-h-[32px] rounded-sm"
+                            width={64}
+                            height={64}
+                            className="object-contain w-auto h-auto max-w-[64px] max-h-[64px] rounded-md"
                         />
                     </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="flex-1 flex flex-col gap-1.5">
+                <div className="flex-1 flex flex-col gap-4">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <div className="flex-1">
-                            <h3 className="text-[10px] font-bold text-foreground mb-0">
+                            <h3 className="text-sm font-bold text-foreground mb-0.5">
                                 {leadership.organization}
                             </h3>
-                            <p className="text-[9px] font-semibold text-primary">
+                            <p className="text-xs font-semibold text-primary">
                                 {leadership.role}
                             </p>
                         </div>
-                        <div className="text-[8px] font-medium text-muted-foreground whitespace-nowrap">
+                        <div className="text-[10px] font-medium text-muted-foreground whitespace-nowrap">
                             {formatDate(leadership.startDate)} - {formatDate(leadership.endDate)}
                         </div>
                     </div>
 
                     {leadership.description && (
-                        <p className="text-[8px] text-muted-foreground leading-tight">
+                        <p className="text-xs text-muted-foreground leading-relaxed">
                             {leadership.description}
                         </p>
                     )}
@@ -57,9 +57,8 @@ export default function LeadershipCard({ leadership }: LeadershipCardProps) {
                                     href={leadership.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[9px]"
                                 >
-                                    View Credential <span className="ml-0.5 transition-transform group-hover:translate-x-0.5">→</span>
+                                    View Credential <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
                                 </a>
                             </Button>
                         </div>
