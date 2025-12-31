@@ -9,7 +9,7 @@ export function EducationList() {
     return (
         <div className="flex flex-col gap-12">
             <div className="flex flex-col space-y-4 text-center mb-4">
-                <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+                <h2 className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl">
                     Education
                 </h2>
                 <p className="text-muted-foreground text-lg sm:text-xl max-w-[85%] mx-auto leading-normal sm:leading-7">
@@ -23,7 +23,7 @@ export function EducationList() {
 
                 return (
                     <div key={category} className="flex flex-col gap-6">
-                        <h3 className="font-heading text-2xl md:text-3xl text-primary font-semibold border-b pb-2 mb-4">
+                        <h3 className="font-heading text-xl md:text-2xl text-primary font-semibold border-b pb-2 mb-4">
                             {category}
                         </h3>
                         <div className="flex flex-col gap-8">

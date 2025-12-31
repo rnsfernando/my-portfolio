@@ -101,7 +101,7 @@ export default function IndexPage() {
         <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center lg:justify-center order-1 lg:order-1">
-            <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]">
+            <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-blue-600 rounded-full blur-2xl opacity-40 animate-pulse" />
               <div className="absolute -inset-1 bg-gradient-to-br from-primary to-purple-600 rounded-full opacity-60" />
               <Image
@@ -123,20 +123,20 @@ export default function IndexPage() {
               <AnimatedText
                 as="h1"
                 delay={0.2}
-                className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+                className="font-heading text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight"
               >
                 {siteConfig.authorName}
               </AnimatedText>
               <AnimatedText
                 as="h3"
                 delay={0.3}
-                className="font-heading text-xl sm:text-2xl md:text-3xl text-muted-foreground"
+                className="font-heading text-lg sm:text-xl md:text-2xl text-muted-foreground"
               >
                 Biomedical Engineering Undergraduate
               </AnimatedText>
             </div>
 
-            <AnimatedText delay={0.4} className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <AnimatedText delay={0.4} className="text-base text-muted-foreground leading-relaxed max-w-xl">
               I am a Biomedical Engineering Undergraduate with a strong passion for AI, Machine Learning, and Computer Vision. I enjoy applying data-driven approaches to solve real-world problems and building intelligent software systems that make a difference in healthcare and technology.
             </AnimatedText>
 
@@ -246,7 +246,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
           >
             {pagesConfig.projects.title}
           </AnimatedText>
@@ -313,7 +313,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-12">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
           >
             {pagesConfig.skills.title}
           </AnimatedText>
@@ -350,7 +350,7 @@ export default function IndexPage() {
         <div className="container mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
           >
             Volunteering
           </AnimatedText>

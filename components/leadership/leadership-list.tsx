@@ -5,7 +5,7 @@ export function LeadershipList() {
     return (
         <div className="space-y-6">
             <div className="space-y-4 text-center">
-                <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+                <h2 className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl">
                     Leadership Experience
                 </h2>
                 <p className="text-lg text-muted-foreground">

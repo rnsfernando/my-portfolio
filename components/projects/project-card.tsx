@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
       <div className="pt-5 space-y-3">
-        <h5 className="text-2xl font-bold tracking-tight text-foreground">
+        <h5 className="text-xl font-bold tracking-tight text-foreground">
           {project.companyName}
         </h5>
         <div className="flex items-center gap-2 text-sm text-primary font-medium">
@@ -51,7 +51,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 })}`}
           </span>
         </div>
-        <p className="line-clamp-3 font-normal text-muted-foreground">
+        <p className="line-clamp-3 text-sm font-normal text-muted-foreground">
           {project.shortDescription}
         </p>
         <div className="flex gap-2 flex-wrap">

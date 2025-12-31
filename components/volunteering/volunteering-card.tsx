@@ -12,10 +12,10 @@ export default function VolunteeringCard({ volunteering }: VolunteeringCardProps
                 <div className="flex-1 flex flex-col gap-2">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <div className="flex-1">
-                            <h3 className="text-xl font-bold text-foreground mb-1">
+                            <h3 className="text-lg font-bold text-foreground mb-1">
                                 {volunteering.organization}
                             </h3>
-                            <p className="text-lg font-semibold text-primary">
+                            <p className="text-base font-semibold text-primary">
                                 {volunteering.role}
                             </p>
                         </div>
@@ -25,7 +25,7 @@ export default function VolunteeringCard({ volunteering }: VolunteeringCardProps
                     </div>
 
                     {volunteering.description && (
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             {volunteering.description}
                         </p>
                     )}

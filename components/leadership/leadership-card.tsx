@@ -13,7 +13,7 @@ export default function LeadershipCard({ leadership }: LeadershipCardProps) {
     };
 
     return (
-        <div className="rounded-2xl border border-border bg-card p-8 shadow-sm transition-all hover:shadow-md">
+        <div className="rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
             <div className="flex flex-col md:flex-row gap-6 md:items-start">
                 {/* Logo Section */}
                 <div className="flex-shrink-0 mx-auto md:mx-0">
@@ -32,10 +32,10 @@ export default function LeadershipCard({ leadership }: LeadershipCardProps) {
                 <div className="flex-1 flex flex-col gap-4">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <div className="flex-1">
-                            <h3 className="text-xl font-bold text-foreground mb-1">
+                            <h3 className="text-lg font-bold text-foreground mb-1">
                                 {leadership.organization}
                             </h3>
-                            <p className="text-lg font-semibold text-primary">
+                            <p className="text-base font-semibold text-primary">
                                 {leadership.role}
                             </p>
                         </div>
@@ -45,7 +45,7 @@ export default function LeadershipCard({ leadership }: LeadershipCardProps) {
                     </div>
 
                     {leadership.description && (
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             {leadership.description}
                         </p>
                     )}
