@@ -22,11 +22,11 @@ export default function ContactPage() {
         <div className="w-full grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left visual/cta column */}
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left animate-in fade-in slide-in-from-left-4 duration-700">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold tracking-tight">
               <span className="bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">Let's create something</span> <br />
               <span className="text-primary bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">amazing</span> together.
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
               Whether you have a question, a project idea, or just want to say hi, I'm always open to discussing new opportunities.
             </p>
           </div>
@@ -42,8 +42,8 @@ export default function ContactPage() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-muted-foreground mb-0.5 uppercase tracking-wide">Phone</p>
-                    <p className="text-lg font-bold tracking-tight text-foreground">+94 740 697 048</p>
+                    <p className="text-[10px] font-semibold text-muted-foreground mb-0.5 uppercase tracking-wide">Phone</p>
+                    <p className="text-base font-bold tracking-tight text-foreground">+94 740 697 048</p>
                   </div>
                 </a>
 
@@ -52,10 +52,10 @@ export default function ContactPage() {
                   <div className="p-4 rounded-full bg-primary/10 text-primary group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-all duration-300 shadow-sm mt-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
                   </div>
-                  <div className="flex-1 space-y-1.5">
-                    <p className="text-xs font-semibold text-muted-foreground mb-0.5 uppercase tracking-wide">Email</p>
-                    <a href="mailto:rnsithmafernando02@gmail.com" className="block text-base font-medium hover:text-primary transition-colors">rnsithmafernando02@gmail.com</a>
-                    <a href="mailto:fernandowwrns.21@uom.lk" className="block text-base font-medium hover:text-primary transition-colors">fernandowwrns.21@uom.lk</a>
+                  <div className="flex-1 space-y-1">
+                    <p className="text-[10px] font-semibold text-muted-foreground mb-0.5 uppercase tracking-wide">Email</p>
+                    <a href="mailto:rnsithmafernando02@gmail.com" className="block text-sm font-medium hover:text-primary transition-colors">rnsithmafernando02@gmail.com</a>
+                    <a href="mailto:fernandowwrns.21@uom.lk" className="block text-sm font-medium hover:text-primary transition-colors">fernandowwrns.21@uom.lk</a>
                   </div>
                 </div>
 

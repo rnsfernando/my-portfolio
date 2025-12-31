@@ -9,7 +9,7 @@ export function EducationList() {
     return (
         <div className="flex flex-col gap-12">
             <div className="flex flex-col space-y-4 text-center mb-4">
-                <h2 className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl">
+                <h2 className="font-heading text-xl md:text-2xl">
                     Education
                 </h2>
                 <p className="text-muted-foreground text-lg sm:text-xl max-w-[85%] mx-auto leading-normal sm:leading-7">
@@ -23,7 +23,7 @@ export function EducationList() {
 
                 return (
                     <div key={category} className="flex flex-col gap-6">
-                        <h3 className="font-heading text-xl md:text-2xl text-primary font-semibold border-b pb-2 mb-4">
+                        <h3 className="font-heading text-lg md:text-xl text-primary font-semibold border-b pb-1 mb-2">
                             {category}
                         </h3>
                         <div className="flex flex-col gap-8">
@@ -32,7 +32,7 @@ export function EducationList() {
                                     key={index}
                                     className="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
                                 >
-                                    <div className="flex flex-col md:flex-row gap-6 p-6">
+                                    <div className="flex flex-col md:flex-row gap-4 p-4">
                                         <div className="flex-shrink-0">
                                             <div className="h-24 w-24 rounded-full bg-white flex items-center justify-center overflow-hidden p-1 border border-muted shadow-sm">
                                                 {item.logo ? (
@@ -60,15 +60,15 @@ export function EducationList() {
                                                 </div>
                                             </div>
 
-                                            <div className="pt-2 flex flex-wrap items-center gap-4">
+                                            <div className="pt-1 flex flex-wrap items-center gap-2">
                                                 {item.score && (
-                                                    <div className="inline-flex items-center rounded-xl border border-transparent bg-secondary px-6 py-3 text-lg font-medium text-secondary-foreground shadow-sm">
+                                                    <div className="inline-flex items-center rounded-lg border border-transparent bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground shadow-sm">
                                                         {item.score}
                                                     </div>
                                                 )}
                                                 {item.awards && (
-                                                    <div className="flex items-center gap-2 text-lg text-muted-foreground font-medium px-2">
-                                                        <Icons.star className="h-5 w-5 text-yellow-500" />
+                                                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium px-1">
+                                                        <Icons.star className="h-3.5 w-3.5 text-yellow-500" />
                                                         {item.awards}
                                                     </div>
                                                 )}

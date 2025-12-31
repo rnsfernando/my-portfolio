@@ -30,7 +30,7 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
+    <div className="group relative overflow-hidden rounded-lg border bg-background p-3 sm:p-4 transition-all duration-300">
       <div className="flex items-start gap-3 sm:gap-4">
         {experience.logo && (
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
@@ -46,7 +46,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         <div className="flex-1 min-w-0">
           <div className="flex flex-col gap-1 sm:gap-2">
             <div className="flex items-start sm:items-center gap-2">
-              <h3 className="text-base sm:text-lg font-bold text-foreground line-clamp-2 sm:line-clamp-1">
+              <h3 className="text-sm sm:text-base font-bold text-foreground line-clamp-2 sm:line-clamp-1">
                 {experience.position}
               </h3>
               {experience.companyUrl && (
@@ -60,7 +60,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                 </a>
               )}
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs text-muted-foreground">
               <span className="font-medium">{experience.company}</span>
               <span className="hidden sm:inline">•</span>
               <span>{experience.location}</span>
@@ -71,7 +71,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               </span>
             </div>
           </div>
-          <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2">
+          <p className="mt-2 sm:mt-1.5 text-xs text-muted-foreground line-clamp-3">
             {experience.description[0]}
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">

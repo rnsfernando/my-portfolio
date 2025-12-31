@@ -101,7 +101,7 @@ export default function IndexPage() {
         <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center lg:justify-center order-1 lg:order-1">
-            <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px]">
+            <div className="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] lg:w-[280px] lg:h-[280px]">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-blue-600 rounded-full blur-2xl opacity-40 animate-pulse" />
               <div className="absolute -inset-1 bg-gradient-to-br from-primary to-purple-600 rounded-full opacity-60" />
               <Image
@@ -119,24 +119,24 @@ export default function IndexPage() {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 order-2 lg:order-2">
 
 
-            <div className="space-y-2">
+            <div className="space-y-1">
               <AnimatedText
                 as="h1"
                 delay={0.2}
-                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight"
+                className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold tracking-tight"
               >
                 {siteConfig.authorName}
               </AnimatedText>
               <AnimatedText
                 as="h3"
                 delay={0.3}
-                className="font-heading text-base sm:text-lg md:text-xl text-muted-foreground"
+                className="font-heading text-sm sm:text-base md:text-lg text-muted-foreground"
               >
                 Biomedical Engineering Undergraduate
               </AnimatedText>
             </div>
 
-            <AnimatedText delay={0.4} className="text-base text-muted-foreground leading-relaxed max-w-xl">
+            <AnimatedText delay={0.4} className="text-sm text-muted-foreground leading-relaxed max-w-xl">
               I am a Biomedical Engineering Undergraduate with a strong passion for AI, Machine Learning, and Computer Vision. I enjoy applying data-driven approaches to solve real-world problems and building intelligent software systems that make a difference in healthcare and technology.
             </AnimatedText>
 
@@ -147,20 +147,20 @@ export default function IndexPage() {
                 <Link
                   href={siteConfig.links.github}
                   target="_blank"
-                  className={cn(buttonVariants({ size: "default" }))}
+                  className={cn(buttonVariants({ size: "sm" }))}
                   aria-label="View Rebecca Fernando's GitHub profile"
                 >
-                  <Icons.gitHub className="w-4 h-4 mr-2" /> GitHub
+                  <Icons.gitHub className="w-3.5 h-3.5 mr-2" /> GitHub
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.6}>
                 <Link
                   href={"https://www.linkedin.com/in/rebecca-fernando-bb4873397/"}
                   target="_blank"
-                  className={cn(buttonVariants({ size: "default" }))}
+                  className={cn(buttonVariants({ size: "sm" }))}
                   aria-label="View Rebecca Fernando's LinkedIn profile"
                 >
-                  <Icons.linkedin className="w-4 h-4 mr-2" /> LinkedIn
+                  <Icons.linkedin className="w-3.5 h-3.5 mr-2" /> LinkedIn
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.7}>
@@ -170,12 +170,12 @@ export default function IndexPage() {
                   className={cn(
                     buttonVariants({
                       variant: "outline",
-                      size: "default",
+                      size: "sm",
                     })
                   )}
                   aria-label="Contact Rebecca Fernando"
                 >
-                  <Icons.contact className="w-4 h-4 mr-2" /> Contact
+                  <Icons.contact className="w-3.5 h-3.5 mr-2" /> Contact
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.8}>
@@ -192,7 +192,7 @@ export default function IndexPage() {
                   )}
                   aria-label="Download CV"
                 >
-                  <Icons.download className="w-4 h-4 mr-2" /> Download CV
+                  <Icons.download className="w-3.5 h-3.5 mr-2" /> Download CV
                 </Link>
               </AnimatedText>
             </div>
@@ -204,9 +204,9 @@ export default function IndexPage() {
                   <AnimatedText
                     key={index}
                     delay={0.8 + index * 0.1}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted border border-border text-foreground text-[10px] sm:text-xs font-medium hover:scale-105 transition-transform duration-200"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-muted border border-border text-foreground text-[9px] sm:text-[10px] font-medium hover:scale-105 transition-transform duration-200"
                   >
-                    <interest.icon className="w-3.5 h-3.5" />
+                    <interest.icon className="w-3 h-3" />
                     <span>{interest.name}</span>
                   </AnimatedText>
                 ))}
@@ -246,7 +246,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
+            className="font-heading text-xl md:text-2xl"
           >
             {pagesConfig.projects.title}
           </AnimatedText>
@@ -313,7 +313,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-12">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
+            className="font-heading text-xl md:text-2xl"
           >
             {pagesConfig.skills.title}
           </AnimatedText>
@@ -350,7 +350,7 @@ export default function IndexPage() {
         <div className="container mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-3xl md:text-5xl"
+            className="font-heading text-xl md:text-2xl"
           >
             Volunteering
           </AnimatedText>
