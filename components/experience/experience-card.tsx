@@ -30,10 +30,10 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-1.5 transition-all duration-300">
+    <div className="group relative overflow-hidden rounded-md border bg-background p-1.5 transition-all duration-300">
       <div className="flex items-start gap-3 sm:gap-4">
         {experience.logo && (
-          <div className="w-6 h-6 rounded border border-border overflow-hidden bg-white flex-shrink-0">
+          <div className="w-6 h-6 rounded-sm border border-border overflow-hidden bg-white flex-shrink-0">
             <Image
               src={experience.logo}
               alt={experience.company}
@@ -46,7 +46,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         <div className="flex-1 min-w-0">
           <div className="flex flex-col gap-1 sm:gap-2">
             <div className="flex items-start sm:items-center gap-1">
-              <h3 className="text-[11px] font-bold text-foreground line-clamp-2 sm:line-clamp-1">
+              <h3 className="text-[10px] sm:text-xs font-bold text-foreground line-clamp-2 sm:line-clamp-1 leading-none">
                 {experience.position}
               </h3>
               {experience.companyUrl && (
@@ -56,51 +56,51 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
                 >
-                  <Icons.externalLink className="w-3 h-3" />
+                  <Icons.externalLink className="w-2.5 h-2.5" />
                 </a>
               )}
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 text-[8px] text-muted-foreground">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 text-[8px] text-muted-foreground leading-none">
               <span className="font-medium">{experience.company}</span>
               <span className="hidden sm:inline">•</span>
               <span>{experience.location}</span>
             </div>
             <div className="flex items-center gap-1">
-              <span className="inline-flex items-center px-1 py-0 rounded-full text-[7.5px] font-medium bg-primary/10 text-primary border border-primary/20">
+              <span className="inline-flex items-center px-1 py-0 rounded-full text-[7px] font-medium bg-primary/10 text-primary border border-primary/20">
                 {getDurationText(experience.startDate, experience.endDate)}
               </span>
             </div>
           </div>
-          <p className="mt-1 text-[8px] text-muted-foreground line-clamp-3 leading-tight">
+          <p className="mt-1 text-[8px] text-muted-foreground line-clamp-3 leading-tight tracking-tight">
             {experience.description[0]}
           </p>
           <div className="mt-2 flex flex-wrap gap-0.5">
             {experience.skills.slice(0, 2).map((skill, index) => (
               <span
                 key={index}
-                className="inline-flex items-center px-1 py-0 rounded bg-muted text-muted-foreground text-[7px] font-medium"
+                className="inline-flex items-center px-1 py-0 rounded-sm text-[7px] font-medium bg-muted text-muted-foreground"
               >
                 {skill}
               </span>
             ))}
             {experience.skills.length > 2 && (
-              <span className="inline-flex items-center px-1 py-0 rounded bg-muted text-muted-foreground text-[7px] font-medium">
+              <span className="inline-flex items-center px-1 py-0 rounded-sm text-[7px] font-medium bg-muted text-muted-foreground">
                 +{experience.skills.length - 2}
               </span>
             )}
           </div>
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 flex justify-end">
+      <div className="mt-2 flex justify-end">
         <Button
           variant="outline"
-          size="sm"
-          className="rounded-lg w-full sm:w-auto"
+          size="xs"
+          className="rounded-md w-full sm:w-auto text-[8px] h-5 px-2"
           asChild
         >
           <Link href={`/experience/${experience.id}`}>
-            View Details
-            <Icons.chevronRight className="ml-2 h-4 w-4" />
+            View
+            <Icons.chevronRight className="ml-1 h-2 w-2" />
           </Link>
         </Button>
       </div>

@@ -14,7 +14,7 @@ export default function FinalYearProjectCard({
     project,
 }: FinalYearProjectCardProps) {
     return (
-        <div className="w-full rounded-lg border border-border bg-card text-card-foreground shadow-sm p-3">
+        <div className="w-full rounded-xl border border-border bg-card text-card-foreground shadow-sm p-6 sm:p-8">
             <div className="flex flex-col lg:flex-row gap-8 items-center">
                 <div className="relative w-full lg:w-[45%] shrink-0 flex justify-center">
                     <div className="relative w-full max-w-[500px] aspect-video">
@@ -24,7 +24,7 @@ export default function FinalYearProjectCard({
                             src={fypImg}
                             alt={project.companyName}
                             fill
-                            className="rounded-lg border-[3px] border-background object-contain shadow-xl relative z-10"
+                            className="rounded-2xl border-[6px] border-background object-contain shadow-2xl relative z-10"
                             priority
                         />
                     </div>
@@ -32,13 +32,13 @@ export default function FinalYearProjectCard({
 
                 <div className="flex-1 flex flex-col w-full">
                     <div className="flex flex-col justify-between gap-4 mb-4">
-                        <h3 className="font-heading text-lg font-bold">
+                        <h3 className="font-heading text-2xl font-bold md:text-3xl">
                             {project.companyName}
                         </h3>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                            <div className="flex items-center gap-1.5 text-[8px] text-primary font-medium whitespace-nowrap">
-                                <Icons.calendar className="h-3 w-3" />
+                            <div className="flex items-center gap-2 text-sm text-primary font-medium whitespace-nowrap">
+                                <Icons.calendar className="h-4 w-4" />
                                 <span>
                                     {project.endDate === "Ongoing"
                                         ? "Ongoing"
@@ -68,9 +68,9 @@ export default function FinalYearProjectCard({
                                     href={project.websiteLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1.5 text-[8px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                                 >
-                                    <Icons.externalLink className="h-3 w-3" />
+                                    <Icons.externalLink className="h-4 w-4" />
                                     Read More
                                 </Link>
                             )}
@@ -78,11 +78,11 @@ export default function FinalYearProjectCard({
 
                     </div>
 
-                    <div className="space-y-1.5 text-muted-foreground text-[8px] leading-snug mb-3 flex-1">
+                    <div className="space-y-4 text-muted-foreground text-base leading-relaxed mb-6 flex-1">
                         {project.descriptionDetails.bullets.length > 0 ? (
-                            <ul className="list-disc pl-3 space-y-0.5">
+                            <ul className="list-disc pl-5 space-y-2">
                                 {project.descriptionDetails.bullets.map((bullet, index) => (
-                                    <li key={index} className="pl-0.5">
+                                    <li key={index} className="pl-1">
                                         {bullet}
                                     </li>
                                 ))}
@@ -93,14 +93,14 @@ export default function FinalYearProjectCard({
                     </div>
 
                     {project.githubLink && (
-                        <div className="mt-auto">
+                        <div className="mt-auto pt-4">
                             <Link
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Button variant="outline" size="sm" className="h-6 px-2 text-[8px] gap-1">
-                                    <Icons.gitHub className="h-2.5 w-2.5" /> See Source
+                                <Button variant="outline" size="sm" className="gap-2">
+                                    <Icons.gitHub className="h-4 w-4" /> See Source
                                 </Button>
                             </Link>
                         </div>
