@@ -13,6 +13,7 @@ export default function ContactPage() {
   return (
     <PageContainer
       title={pagesConfig.contact.title}
+      description={pagesConfig.contact.description}
     >
       <div className="relative flex flex-col items-center justify-center min-h-[60vh] w-full max-w-5xl mx-auto px-4 py-12">
         {/* Background decorative elements */}
