@@ -4,11 +4,11 @@ import AwardsCard from "./awards-card";
 export function AwardsList() {
     return (
         <div className="space-y-6">
-            <div className="space-y-4 text-center">
-                <h2 className="font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl">
+            <div className="space-y-1 text-center mb-4">
+                <h2 className="font-heading text-lg md:text-xl font-bold leading-tight tracking-tighter">
                     Awards
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                     Recognition and achievements
                 </p>
             </div>

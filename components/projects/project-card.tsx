@@ -12,8 +12,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="relative p-4 max-w-sm bg-card border border-border rounded-xl shadow-sm transition-all hover:shadow-md hover:border-primary/20 h-full flex flex-col">
-      <div className="relative w-full h-[140px]">
+    <div className="relative p-2 max-w-[280px] bg-card border border-border rounded-lg shadow-sm transition-all hover:shadow-md hover:border-primary/20 h-full flex flex-col">
+      <div className="relative w-full h-[60px]">
         <Image
           className="rounded-lg border border-border object-cover transition-transform hover:scale-105 duration-500"
           src={project.companyLogoImg}
@@ -21,12 +21,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           fill
         />
       </div>
-      <div className="pt-5 space-y-3">
-        <h5 className="text-base font-bold tracking-tight text-foreground">
+      <div className="pt-2 space-y-1.5">
+        <h5 className="text-[11px] font-bold tracking-tight text-foreground">
           {project.companyName}
         </h5>
-        <div className="flex items-center gap-2 text-sm text-primary font-medium">
-          <Icons.calendar className="h-4 w-4" />
+        <div className="flex items-center gap-1 text-[8px] text-primary font-medium">
+          <Icons.calendar className="h-2.5 w-2.5" />
           <span>
             {project.endDate === "Ongoing"
               ? "Ongoing"
@@ -51,24 +51,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 })}`}
           </span>
         </div>
-        <p className="line-clamp-3 text-xs font-normal text-muted-foreground">
+        <p className="line-clamp-2 text-[8px] font-normal text-muted-foreground leading-tight">
           {project.shortDescription}
         </p>
         <div className="flex gap-2 flex-wrap">
           <ChipContainer textArr={project.category} />
         </div>
-        <div className="flex gap-2 mt-4">
+        <div className="flex gap-1 mt-2">
           {project.githubLink && (
             <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Icons.gitHub className="h-4 w-4" /> See More
+              <Button variant="outline" size="sm" className="h-6 px-2 text-[8px] gap-1">
+                <Icons.gitHub className="h-2.5 w-2.5" /> See More
               </Button>
             </Link>
           )}
           {project.websiteLink && (
             <Link href={project.websiteLink} target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="sm" className="gap-2">
-                <Icons.externalLink className="h-4 w-4" /> Live
+              <Button variant="secondary" size="sm" className="h-6 px-2 text-[8px] gap-1">
+                <Icons.externalLink className="h-2.5 w-2.5" /> Live
               </Button>
             </Link>
           )}

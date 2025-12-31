@@ -22,53 +22,53 @@ export function EducationList() {
                 if (items.length === 0) return null;
 
                 return (
-                    <div key={category} className="flex flex-col gap-4">
-                        <h3 className="font-heading text-base md:text-lg text-primary font-semibold border-b pb-0.5 mb-1">
+                    <div key={category} className="flex flex-col gap-3">
+                        <h3 className="font-heading text-sm md:text-base text-primary font-semibold border-b pb-0.5 mb-0.5">
                             {category}
                         </h3>
                         <div className="flex flex-col gap-8">
                             {items.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
+                                    className="rounded-lg border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
                                 >
-                                    <div className="flex flex-col md:flex-row gap-3 p-3">
+                                    <div className="flex flex-col md:flex-row gap-2 p-2">
                                         <div className="flex-shrink-0">
-                                            <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center overflow-hidden p-1 border border-muted shadow-sm">
+                                            <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center overflow-hidden p-0.5 border border-muted shadow-xs">
                                                 {item.logo ? (
                                                     <Image src={item.logo} alt={item.institution} className="h-full w-full object-contain" />
                                                 ) : (
-                                                    <item.icon className="h-6 w-6 text-primary" />
+                                                    <item.icon className="h-5 w-5 text-primary" />
                                                 )}
                                             </div>
                                         </div>
-                                        <div className="flex-grow space-y-1.5">
+                                        <div className="flex-grow space-y-1">
                                             <div>
-                                                <h3 className="text-base font-bold leading-tight tracking-tight">{item.institution}</h3>
-                                                <p className="text-xs font-semibold text-primary/90">{item.degree}</p>
-                                                <p className="text-[10px] text-muted-foreground uppercase tracking-tight">{item.field}</p>
+                                                <h3 className="text-[11px] font-bold leading-tight tracking-tight">{item.institution}</h3>
+                                                <p className="text-[9px] font-semibold text-primary/90">{item.degree}</p>
+                                                <p className="text-[8px] text-muted-foreground uppercase tracking-tight">{item.field}</p>
                                             </div>
 
-                                            <div className="flex flex-col gap-0.5 text-[10px] text-muted-foreground">
-                                                <div className="flex items-center gap-1.5">
-                                                    <Icons.mapPin className="h-3 w-3" />
+                                            <div className="flex flex-col gap-0 text-[8px] text-muted-foreground">
+                                                <div className="flex items-center gap-1">
+                                                    <Icons.mapPin className="h-2.5 w-2.5" />
                                                     {item.location}
                                                 </div>
-                                                <div className="flex items-center gap-1.5">
-                                                    <Icons.calendar className="h-3 w-3" />
+                                                <div className="flex items-center gap-1">
+                                                    <Icons.calendar className="h-2.5 w-2.5" />
                                                     {item.year}
                                                 </div>
                                             </div>
 
-                                            <div className="pt-0.5 flex flex-wrap items-center gap-1.5">
+                                            <div className="pt-0.5 flex flex-wrap items-center gap-1">
                                                 {item.score && (
-                                                    <div className="inline-flex items-center rounded-md border border-transparent bg-secondary/50 px-2 py-0.5 text-[9px] font-bold text-secondary-foreground shadow-sm">
+                                                    <div className="inline-flex items-center rounded border border-transparent bg-secondary/30 px-1 py-0 text-[7.5px] font-bold text-secondary-foreground">
                                                         {item.score}
                                                     </div>
                                                 )}
                                                 {item.awards && (
-                                                    <div className="flex items-center gap-1 text-[9px] text-muted-foreground font-medium px-1">
-                                                        <Icons.star className="h-3 w-3 text-yellow-500" />
+                                                    <div className="flex items-center gap-0.5 text-[7.5px] text-muted-foreground font-medium">
+                                                        <Icons.star className="h-2.5 w-2.5 text-yellow-500" />
                                                         {item.awards}
                                                     </div>
                                                 )}
@@ -77,11 +77,11 @@ export function EducationList() {
                                     </div>
 
                                     {item.courses && item.courses.length > 0 && (
-                                        <div className="px-3 pb-3">
-                                            <p className="text-xs font-bold mb-0.5 flex items-center gap-1.5 text-foreground/90">
-                                                <Icons.bookOpen className="h-3 w-3" /> Key Courses:
+                                        <div className="px-2 pb-2">
+                                            <p className="text-[9px] font-bold mb-0.5 flex items-center gap-1 text-foreground/90">
+                                                <Icons.bookOpen className="h-2.5 w-2.5" /> Key Courses:
                                             </p>
-                                            <p className="text-[10px] text-muted-foreground leading-snug">
+                                            <p className="text-[8px] text-muted-foreground leading-snug">
                                                 {item.courses.join(", ")}
                                             </p>
                                         </div>

@@ -130,7 +130,7 @@ export default function IndexPage() {
               <AnimatedText
                 as="h3"
                 delay={0.3}
-                className="font-heading text-sm sm:text-base md:text-lg text-muted-foreground"
+                className="font-heading text-xs sm:text-sm md:text-base text-muted-foreground"
               >
                 Biomedical Engineering Undergraduate
               </AnimatedText>
@@ -261,8 +261,8 @@ export default function IndexPage() {
         <div className="w-full max-w-6xl mx-auto space-y-16">
           {/* Final Year Project Section */}
           {featuredProjects.find(p => p.id === "digital-companion") && (
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-center lg:text-left font-heading">Final Year Project</h3>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-center lg:text-left font-heading">Final Year Project</h3>
               <AnimatedSection delay={0.1} direction="up">
                 <FinalYearProjectCard project={featuredProjects.find(p => p.id === "digital-companion")!} />
               </AnimatedSection>
@@ -270,8 +270,8 @@ export default function IndexPage() {
           )}
 
           {/* Other Projects Section */}
-          <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-center lg:text-left font-heading">Other Projects</h3>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-center lg:text-left font-heading">Other Projects</h3>
             <div className="mx-auto grid justify-center gap-6 md:w-full lg:grid-cols-3">
               {featuredProjects
                 .filter(p => p.id !== "digital-companion")
@@ -350,14 +350,14 @@ export default function IndexPage() {
         <div className="container mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-xl md:text-2xl"
+            className="font-heading text-lg md:text-xl"
           >
             Volunteering
           </AnimatedText>
           <AnimatedText
             as="p"
             delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+            className="max-w-[85%] leading-normal text-muted-foreground text-xs"
           >
             Contributing to the community and organizing events
           </AnimatedText>
