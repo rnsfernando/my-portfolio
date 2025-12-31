@@ -32,7 +32,7 @@ export function EducationList() {
                                     key={index}
                                     className="rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md hover:border-primary/20"
                                 >
-                                    <div className="flex flex-col md:flex-row gap-8 p-8">
+                                    <div className="flex flex-col md:flex-row gap-6 p-6">
                                         <div className="flex-shrink-0">
                                             <div className="h-24 w-24 rounded-full bg-white flex items-center justify-center overflow-hidden p-1 border border-muted shadow-sm">
                                                 {item.logo ? (

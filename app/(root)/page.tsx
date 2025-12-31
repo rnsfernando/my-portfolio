@@ -96,12 +96,12 @@ export default function IndexPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
-      <section className="relative space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center overflow-hidden">
+      <section className="relative space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-16 lg:py-24 min-h-[70vh] flex items-center overflow-hidden">
 
         <div className="container relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center lg:justify-center order-1 lg:order-1">
-            <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
+            <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px]">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-blue-600 rounded-full blur-2xl opacity-40 animate-pulse" />
               <div className="absolute -inset-1 bg-gradient-to-br from-primary to-purple-600 rounded-full opacity-60" />
               <Image
@@ -123,14 +123,14 @@ export default function IndexPage() {
               <AnimatedText
                 as="h1"
                 delay={0.2}
-                className="font-heading text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight"
               >
                 {siteConfig.authorName}
               </AnimatedText>
               <AnimatedText
                 as="h3"
                 delay={0.3}
-                className="font-heading text-lg sm:text-xl md:text-2xl text-muted-foreground"
+                className="font-heading text-base sm:text-lg md:text-xl text-muted-foreground"
               >
                 Biomedical Engineering Undergraduate
               </AnimatedText>
@@ -147,20 +147,20 @@ export default function IndexPage() {
                 <Link
                   href={siteConfig.links.github}
                   target="_blank"
-                  className={cn(buttonVariants({ size: "lg" }))}
+                  className={cn(buttonVariants({ size: "default" }))}
                   aria-label="View Rebecca Fernando's GitHub profile"
                 >
-                  <Icons.gitHub className="w-5 h-5 mr-2" /> GitHub
+                  <Icons.gitHub className="w-4 h-4 mr-2" /> GitHub
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.6}>
                 <Link
                   href={"https://www.linkedin.com/in/rebecca-fernando-bb4873397/"}
                   target="_blank"
-                  className={cn(buttonVariants({ size: "lg" }))}
+                  className={cn(buttonVariants({ size: "default" }))}
                   aria-label="View Rebecca Fernando's LinkedIn profile"
                 >
-                  <Icons.linkedin className="w-5 h-5 mr-2" /> LinkedIn
+                  <Icons.linkedin className="w-4 h-4 mr-2" /> LinkedIn
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.7}>
@@ -170,12 +170,12 @@ export default function IndexPage() {
                   className={cn(
                     buttonVariants({
                       variant: "outline",
-                      size: "lg",
+                      size: "default",
                     })
                   )}
                   aria-label="Contact Rebecca Fernando"
                 >
-                  <Icons.contact className="w-5 h-5 mr-2" /> Contact
+                  <Icons.contact className="w-4 h-4 mr-2" /> Contact
                 </Link>
               </AnimatedText>
               <AnimatedText delay={0.8}>
@@ -187,12 +187,12 @@ export default function IndexPage() {
                   className={cn(
                     buttonVariants({
                       variant: "outline",
-                      size: "lg",
+                      size: "sm",
                     })
                   )}
                   aria-label="Download CV"
                 >
-                  <Icons.download className="w-5 h-5 mr-2" /> Download CV
+                  <Icons.download className="w-4 h-4 mr-2" /> Download CV
                 </Link>
               </AnimatedText>
             </div>
@@ -204,7 +204,7 @@ export default function IndexPage() {
                   <AnimatedText
                     key={index}
                     delay={0.8 + index * 0.1}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E5] border border-[#F5E6C8] text-yellow-950 text-xs sm:text-sm font-medium hover:scale-105 transition-transform duration-200"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted border border-border text-foreground text-[10px] sm:text-xs font-medium hover:scale-105 transition-transform duration-200"
                   >
                     <interest.icon className="w-3.5 h-3.5" />
                     <span>{interest.name}</span>
